@@ -1,0 +1,138 @@
+$cyan: #00a095;
+$bleunoir: #111a21;
+
+body{
+	margin: 0;
+	font-family: 'avenir-lt-pro', 'avenir', sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	font-size: clamp(14px, 3.5vw, 16px);
+
+	.main{
+		position: relative;
+		width: 100%;
+		max-width: 1280px;
+		margin: 5vw auto;
+		padding: 0 10vw;
+		box-sizing: border-box;
+
+		.identity{
+			.name{
+				font-weight: 800;
+				font-size: 3.75em;
+				line-height: 1.1;
+				margin: 0;
+			}
+
+			.subtitle{
+				font-size: 2em;
+				font-weight: 200;
+				margin: 0;
+				text-transform: lowercase;
+				width: 50%;
+				line-height: 1.2;
+			}
+		}
+
+		.resume{
+
+			.title{
+				font-weight: 800;
+				font-size: 2em;
+				color: $cyan;
+				margin: 2.5em 0 0;
+				line-height: 1.2;
+			}
+
+			.entry{
+				margin: 2.5em 0 3.5em;
+				position: relative;
+
+				&::before{
+					content: "";
+					position: absolute;
+					width: 80%;
+					height: 1px;
+					background-color: #111a2180;
+					top: -0.75em;
+					left: 0;
+				}
+
+				.date{
+					font-style: italic;
+					font-weight: 200;
+					margin:0;
+				}
+
+				.job{
+					.job-name{
+						margin: 0.5em 0 0;
+						font-weight: 800;
+						font-size: 1.125em;
+
+						.software{
+							display: none;
+						}
+
+						.soft-icon{
+							display: inline-block;
+							width: 1.7em;
+							height: 1.7em;
+							background-color: #00a095;
+
+							&#ps{
+								background: center / contain no-repeat url("img/cv-photoshop.svg"),;
+							}
+							&#indd{
+								background: center / contain no-repeat url("img/cv-indd.svg"),;
+							}
+							&#ai{
+								background: center / contain no-repeat url("img/cv-illustrator.svg"),;
+							}
+							&#ae{
+								background: center / contain no-repeat url("img/cv-after.svg"),;
+							}
+							&#pe{
+								background: center / contain no-repeat url("img/cv-premiere.svg"),;
+							}
+							&#me{
+								background: center / contain no-repeat url("img/cv-media.svg"),;
+							}
+							&#br{
+								background: center / contain no-repeat url("img/cv-bridge.svg"),;
+							}
+							&#xd{
+								background: center / contain no-repeat url("img/cv-xd.svg"),;
+							}
+						}
+					}
+
+					.job-description{
+						margin: 0.5em 0 0;
+						font-weight: 500;
+					}
+
+					.job-list{
+						margin: 0.5em 0 0;
+						padding: 0 0 0 1em;
+
+						.mission{
+							margin: 0.5em 0 0 0;
+						}
+					}
+				}
+			}
+		&.competence{
+			.date{
+				text-transform: none;
+			}
+			.competence-list{
+				font-weight: 800;
+				margin: 0;
+				width: 70%;
+			}
+		}
+		}
+	
+	}
+}
